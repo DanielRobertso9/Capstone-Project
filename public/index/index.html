@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offroad Trail Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="header-links-container">
+        <h3 class="link"><a href="./index.html">Home</a></h3>
+        <h3 class="link" id="meets" style="display: none;"><a href="../meets/meets.html">Public Meets</a></h3>
+        <h3 class="link" id="profile" style="display: none;"><a href="../profile/profile.html">Profile</a></h3>
+      </nav>
+      <div class="logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAclBMVEX///8AAADr6+v8/Pzz8/NsbGz6+vrg4ODj4+Pd3d06OjpmZmZdXV3u7u4rKyudnZ14eHhNTU2IiIjU1NS7u7uUlJRGRkampqY1NTXGxsZYWFjOzs4TExOTk5NRUVF0dHSkpKSysrIREREdHR2FhYUbGxvb9QZzAAAD70lEQVR4nO3b6XqqMBCAYQNo3XBDca1abe//Fo9hk4SlmybQ872/rD7SDJBkZmg7HQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAX+bsbI/AnqEY2x6CLTMhxMn2IOw4C+nd9jBsCERsansg5jki9WZ7KMaFWexia3sshnVFzt72aIxaC8WL7fEYtBcax/aIjPH10MXEsz0mUzZCXPtzNXjX9qCeL5guZrclfuJ3vA8l+KPtkT3dNg50Lq9yX73t/3pdk6xxYzf/U2pmeXDPtdeCHKrBL2yO7TGcoOKDQA9xqq32ZxPDeyb/QyxLP0hCz9Uu2oxvfWrvbiou4KAkvFAPvtWpvRtv28WWxKAsuDc99lan9uN0x+qp77/Eb2tLwboQu+ibG+uDneTw5V0vJkqKHs/sgxZYSeji0tbU/l2OvttZ6Ne4f4nOiRZWWehCfGh3TEus4tDTzStb7uMeTagFpe9wqWEbg4+u4+j+UrzG7zvXaAXQqpWq0G8Zr+FxP8DyHnq6gkfLvX9Ib4e8VWXo94O0RlSm3J81xMHPex1/Il/o+epLTeitS+0DNfT0uk4GUeiFRvSoNvZ2pfbRdcyVoZ4SSiFXHdSH3qquvXNRQ1enczG/71aEXDxdblheHTSGJ2/sfOfFzYdRrOvqZ3ssyX7n2XbRPK7rBFtZk8zze1huA7sMil+KZ/vhWBt8dMp28tW4eTu+090Ns6abuinvsgiufvGL0Wy/rt2OV73Ji6hrn5QHk6Zl+dGNngrVzCUrTodlzWc526fxF3o10V+cU/a6WcWtKztOwzA87saj0UlL2jbJkEu7r7fZPrufkt5r7Z2fatTCL2/rdcVn3iEesJ7MJd8M1SXAn30l+PJjWSGXq8rdJ3nAXJ6e9Yudqf64NuzYsCnVraxWq3ss8R62+sbx9oX2VYmqJqhZt9TlUrP2Rs3oqglRIdh9Fvq3D/kUb3pfpvh59YSoNPj8zrdf5CyLjQjV6w+bjv1CrjvfLpSfQ8sPbIPsqVKVd1GSzH2Jo6z5R3kGfSX6w0+P/BCDz/8qrvuLPMzLQh0NCm9JFh9g+F+orn+Xf3tREXjKnz/l2lsr7r2rOD//t0zf9TLAy6V/R0u1zfAHC/hj5KK3U9scbT41yqX+Fmqb0Y8X8Mfwsn6Q8YbGzP4TI3d1SXYBs5P+9dCEPwVLGx6bkq7I06xDg7+s1vRgeNIvG/RPDkm7x1Rts7VfRyim8imfmYZG8J1q3Ije2VBtU9JsaYDz1UBDw2tGy6Sgt37+pG/ew4HM+X/9XyvJPR+bkHbY8mY93QQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJP4B1p0hkkKERb4AAAAASUVORK5CYII=" id="logo" alt="logo"></img>
+        <h1>
+          Offroad Trail Guides
+        </h1>
+      </div>
+      <div class="social-container">
+        <button id="register" onclick="openSignupMenu()">Sign Up</button>
+        <button id="log-out" style="display: none;" onclick="updatedUserKey({key: 0})">Log Out</button>
+        <p id="log-in" onclick="openLoginMenu()">Log in</p>
+
+      </div>
+  </header>
+  
+  <main class="main-body">
+    <section id= 'trail-list' class="trails-body"> </section>
+  </main>
+
+  <form id="login-container">
+    <div id="login-logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAclBMVEX///8AAADr6+v8/Pzz8/NsbGz6+vrg4ODj4+Pd3d06OjpmZmZdXV3u7u4rKyudnZ14eHhNTU2IiIjU1NS7u7uUlJRGRkampqY1NTXGxsZYWFjOzs4TExOTk5NRUVF0dHSkpKSysrIREREdHR2FhYUbGxvb9QZzAAAD70lEQVR4nO3b6XqqMBCAYQNo3XBDca1abe//Fo9hk4SlmybQ872/rD7SDJBkZmg7HQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAX+bsbI/AnqEY2x6CLTMhxMn2IOw4C+nd9jBsCERsansg5jki9WZ7KMaFWexia3sshnVFzt72aIxaC8WL7fEYtBcax/aIjPH10MXEsz0mUzZCXPtzNXjX9qCeL5guZrclfuJ3vA8l+KPtkT3dNg50Lq9yX73t/3pdk6xxYzf/U2pmeXDPtdeCHKrBL2yO7TGcoOKDQA9xqq32ZxPDeyb/QyxLP0hCz9Uu2oxvfWrvbiou4KAkvFAPvtWpvRtv28WWxKAsuDc99lan9uN0x+qp77/Eb2tLwboQu+ibG+uDneTw5V0vJkqKHs/sgxZYSeji0tbU/l2OvttZ6Ne4f4nOiRZWWehCfGh3TEus4tDTzStb7uMeTagFpe9wqWEbg4+u4+j+UrzG7zvXaAXQqpWq0G8Zr+FxP8DyHnq6gkfLvX9Ib4e8VWXo94O0RlSm3J81xMHPex1/Il/o+epLTeitS+0DNfT0uk4GUeiFRvSoNvZ2pfbRdcyVoZ4SSiFXHdSH3qquvXNRQ1enczG/71aEXDxdblheHTSGJ2/sfOfFzYdRrOvqZ3ssyX7n2XbRPK7rBFtZk8zze1huA7sMil+KZ/vhWBt8dMp28tW4eTu+090Ns6abuinvsgiufvGL0Wy/rt2OV73Ji6hrn5QHk6Zl+dGNngrVzCUrTodlzWc526fxF3o10V+cU/a6WcWtKztOwzA87saj0UlL2jbJkEu7r7fZPrufkt5r7Z2fatTCL2/rdcVn3iEesJ7MJd8M1SXAn30l+PJjWSGXq8rdJ3nAXJ6e9Yudqf64NuzYsCnVraxWq3ss8R62+sbx9oX2VYmqJqhZt9TlUrP2Rs3oqglRIdh9Fvq3D/kUb3pfpvh59YSoNPj8zrdf5CyLjQjV6w+bjv1CrjvfLpSfQ8sPbIPsqVKVd1GSzH2Jo6z5R3kGfSX6w0+P/BCDz/8qrvuLPMzLQh0NCm9JFh9g+F+orn+Xf3tREXjKnz/l2lsr7r2rOD//t0zf9TLAy6V/R0u1zfAHC/hj5KK3U9scbT41yqX+Fmqb0Y8X8Mfwsn6Q8YbGzP4TI3d1SXYBs5P+9dCEPwVLGx6bkq7I06xDg7+s1vRgeNIvG/RPDkm7x1Rts7VfRyim8imfmYZG8J1q3Ije2VBtU9JsaYDz1UBDw2tGy6Sgt37+pG/ew4HM+X/9XyvJPR+bkHbY8mY93QQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJP4B1p0hkkKERb4AAAAASUVORK5CYII=" id="logo" alt="logo"></img>
+        <h1>
+          Offroad Trail Guides
+        </h1>
+    </div>
+    <h2>Log In</h2>
+    <div id="login-cred">
+        <h4>Username</h4>
+        <input type="username" id="username-input" placeholder="Type your username">
+        <h4>Password</h4>
+        <input type="password" id="password-input" placeholder="Type your password">
+    </div>
+    <div id="login-btns">
+        <button id="log-in-btn" type="button" onclick="logIn(1)">Login</button>
+        <p>or sign up here</p>
+        <button id="sign-up-btn" type="button" onclick="openSignupMenu(), closeLoginMenu()">Sign Up</button>
+    </div>
+</form>
+
+<form id="signup-container">
+  <div id="login-logo">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAclBMVEX///8AAADr6+v8/Pzz8/NsbGz6+vrg4ODj4+Pd3d06OjpmZmZdXV3u7u4rKyudnZ14eHhNTU2IiIjU1NS7u7uUlJRGRkampqY1NTXGxsZYWFjOzs4TExOTk5NRUVF0dHSkpKSysrIREREdHR2FhYUbGxvb9QZzAAAD70lEQVR4nO3b6XqqMBCAYQNo3XBDca1abe//Fo9hk4SlmybQ872/rD7SDJBkZmg7HQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAX+bsbI/AnqEY2x6CLTMhxMn2IOw4C+nd9jBsCERsansg5jki9WZ7KMaFWexia3sshnVFzt72aIxaC8WL7fEYtBcax/aIjPH10MXEsz0mUzZCXPtzNXjX9qCeL5guZrclfuJ3vA8l+KPtkT3dNg50Lq9yX73t/3pdk6xxYzf/U2pmeXDPtdeCHKrBL2yO7TGcoOKDQA9xqq32ZxPDeyb/QyxLP0hCz9Uu2oxvfWrvbiou4KAkvFAPvtWpvRtv28WWxKAsuDc99lan9uN0x+qp77/Eb2tLwboQu+ibG+uDneTw5V0vJkqKHs/sgxZYSeji0tbU/l2OvttZ6Ne4f4nOiRZWWehCfGh3TEus4tDTzStb7uMeTagFpe9wqWEbg4+u4+j+UrzG7zvXaAXQqpWq0G8Zr+FxP8DyHnq6gkfLvX9Ib4e8VWXo94O0RlSm3J81xMHPex1/Il/o+epLTeitS+0DNfT0uk4GUeiFRvSoNvZ2pfbRdcyVoZ4SSiFXHdSH3qquvXNRQ1enczG/71aEXDxdblheHTSGJ2/sfOfFzYdRrOvqZ3ssyX7n2XbRPK7rBFtZk8zze1huA7sMil+KZ/vhWBt8dMp28tW4eTu+090Ns6abuinvsgiufvGL0Wy/rt2OV73Ji6hrn5QHk6Zl+dGNngrVzCUrTodlzWc526fxF3o10V+cU/a6WcWtKztOwzA87saj0UlL2jbJkEu7r7fZPrufkt5r7Z2fatTCL2/rdcVn3iEesJ7MJd8M1SXAn30l+PJjWSGXq8rdJ3nAXJ6e9Yudqf64NuzYsCnVraxWq3ss8R62+sbx9oX2VYmqJqhZt9TlUrP2Rs3oqglRIdh9Fvq3D/kUb3pfpvh59YSoNPj8zrdf5CyLjQjV6w+bjv1CrjvfLpSfQ8sPbIPsqVKVd1GSzH2Jo6z5R3kGfSX6w0+P/BCDz/8qrvuLPMzLQh0NCm9JFh9g+F+orn+Xf3tREXjKnz/l2lsr7r2rOD//t0zf9TLAy6V/R0u1zfAHC/hj5KK3U9scbT41yqX+Fmqb0Y8X8Mfwsn6Q8YbGzP4TI3d1SXYBs5P+9dCEPwVLGx6bkq7I06xDg7+s1vRgeNIvG/RPDkm7x1Rts7VfRyim8imfmYZG8J1q3Ije2VBtU9JsaYDz1UBDw2tGy6Sgt37+pG/ew4HM+X/9XyvJPR+bkHbY8mY93QQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJP4B1p0hkkKERb4AAAAASUVORK5CYII=" id="logo" alt="logo"></img>
+      <h1>
+        Offroad Trail Guides
+      </h1>
+  </div>
+  <h2>Sign Up</h2>
+  <div id="sign-up-info">
+      <h4>Username</h4>
+      <input type="username" class="signup-input" id="username-input2" placeholder="Type your username">
+      <h4>Password</h4>
+      <input type="text" class="signup-input" id="password-input2" placeholder="Type your password">
+      <h4>First Name</h4>
+      <input type="text" class="signup-input" id="first-name-input" placeholder="Type your first name">
+      <h4>Last Name</h4>
+      <input type="text" class="signup-input" id="last-name-input" placeholder="Type your last name">
+      <h4>Vehicle</h4>
+      <input type="text" class="signup-input" id="vehicle-input" placeholder="Type your Vehicle">
+      <h4>Photo URL</h4>
+      <input type="text" class="signup-input" id="photo-input" placeholder="Copy in photo url">
+  </div>
+  <div id="signup-btns">
+      <button id="sign-up-btn2" type="button" onclick="createUser()">Sign Up</button>
+      <p>or login here</p>
+      <button id="log-in-btn2" type="button" onclick="closeSignupMenu(), openLoginMenu()">Login</button>
+      
+  </div>
+</form>
+
+  
+  <footer>
+    <p>&#0153 Offroad Trail Services</p>
+    <section class="email-sign-up">
+      <h4>Register for Notifcations</h4>
+      <input id="email" type="text" placeholder="Your Email" />
+      <button id="sign-up">Register</button>
+    </section>
+  </footer>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+  </html>

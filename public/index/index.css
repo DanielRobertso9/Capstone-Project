@@ -1,0 +1,670 @@
+Body {
+    padding: 0;
+    margin: 0;
+    color: #fcfffc;
+    background-color: #ced3dc;
+    font-family: "Josefin Sans", sans-serif;
+    transition: 1s;
+    height: 103vh;
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  main {
+    display: flex;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    padding-right: 100px;
+    position: fixed;
+    left: 38%
+  }
+  
+  #logo {
+    width: 90px;
+  }
+  
+  .header-container {
+    height: 75px;
+    width: 100vw;
+    color: black;
+    background-color: #fcfffc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-links-container {
+    width: 500px;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+  }
+  
+  .link{
+    margin-left: 40px;
+  }
+
+  .header-links-container > h3:hover {
+    color: #275dad;
+    cursor: pointer;
+  }
+  
+  .header-links-container > h3:active {
+    transform: scale(0.9, 0.9);
+  }
+  
+  .social-container {
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 20px;
+  }
+  
+  .social-container > p:hover {
+    color: #275dad;
+  }
+  
+  .social-container > p:active {
+    transform: scale(0.9, 0.9);
+  }
+  
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .upper-container {
+    height: 50px;
+    width: 75vw;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-container {
+    height: 40px;
+    width: 550px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+  }
+  
+  .location-container {
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+  
+  .filter {
+    height: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: #fcfffc;
+  }
+  
+  .filter:hover {
+    color: #275dad;
+    box-shadow: 0px 0px 15px #275dad;
+    cursor: pointer;
+  }
+  
+  .filter:active {
+    transform: scale(0.9, 0.9);
+  }
+  
+  #location-input {
+    width: 200px;
+  }
+  
+  #location-btn {
+    width: 40px;
+    border-radius: 0px 15px 15px 0px;
+  }
+  
+  .trails-body {
+    width: 75vw;
+    height: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+  
+  .trails-container {
+    width: 300px;
+    height: 460px;
+    color: black;
+    background-color: #fcf7f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 30px;
+    z-index: 0;
+  }
+  
+  .trail-img {
+    height: 200px;
+    width: 260px;
+    border-radius: 20px;
+  }
+  
+  .easy {
+    color: green;
+  }
+  
+  .moderate {
+    color: orange;
+  }
+  
+  .hard {
+    color: red;
+  }
+  
+  Footer {
+    background-color: #fcfffc;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0;
+  }
+
+  .footer{
+    position: fixed;
+    bottom: -5;
+  }
+  
+  .email-sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin-right: 50px;
+  }
+  
+  footer > p {
+    padding-left: 20px;
+  }
+  
+  input {
+    font-family: "Josefin Sans", sans-serif;
+    width: 100px;
+  }
+  
+  #email {
+    width: 250px;
+    margin: 10px;
+  }
+  
+  .email-sign-up > p {
+    font-size: 13px;
+  }
+  
+  button {
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+    padding: 5px 10px;
+    background-color: #5b616a;
+    color: white;
+    width: 100px;
+  }
+  
+  button:hover {
+    box-shadow: 0px 0px 15px #5b616a;
+    cursor: pointer;
+  }
+  
+  button:active {
+    transform: scale(0.9, 0.9);
+  }
+  
+  .slideshow-container {
+    position: relative;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    top: 42%;
+    color: #fcfffc;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    padding: 5px;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: #fcfffc;
+    color: black;
+  }
+
+  .trail-icons{
+    margin-top: -20px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+  }
+  
+
+  /* LOGIN PAGE STYLING */
+
+  #login-container{
+    top: 20%;
+    left: 37%;
+    border-radius: 20px;
+    transition: .3s;
+  }
+
+  #signup-container{
+    top: 20%;
+    left: 37%;
+    border-radius: 20px;
+    transition: .3s;
+  }
+
+  .signup-input{
+    width: 200px;
+  }
+
+  #sign-up-info > h4 {
+    margin-bottom: 0px;
+  }
+
+  #sign-up-btn{
+    margin-top: 20px;
+  }
+
+  #log-in-btn2{
+    margin-top: -80px;
+    margin-bottom: 20px;
+  }
+
+  form{
+    width: 500px;
+    height: 700px;
+    background-color: #ced3dc;
+    color: black;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    border-radius: 20px;
+
+  }
+
+
+  #login-logo{
+    margin-top: 0px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  #login-cred{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+
+  }
+
+  #username-input{
+    margin-top: -20px;
+    width: 200px;
+    height: 18px;
+  }
+
+  #password-input{
+    margin-top: -20px;
+    width: 200px;
+    height: 18px;
+  }
+
+  #login-btns{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  #sign-up-btn{
+    margin-top: -200px;
+    margin-bottom: 20px;
+    width: 150px;
+  }
+
+  #log-in-btn{
+    margin-top: -100px;
+    width: 150px;
+  }
+
+  .opened{
+    opacity: 1;;
+  }
+
+
+  /* PROFILE CSS */
+
+  #profile-body{
+    display: flex;
+    justify-content: space-evenly;
+    min-height: auto;
+  }
+
+  #profile-container{
+    width: 500px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #list-container{
+    width: 1050px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #user-container{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfffc;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+  }
+
+  #profile-pic{
+    height: 250px;
+    width: 280px;
+    border-radius: 30px;
+  }
+
+  #user-info{
+    margin-top: 10px;
+    margin-left: 0px;
+    padding-left: 20px;
+    border: solid black 5px;
+    border-radius: 30px;
+    width: 250px;
+    height: 120px;
+    color: black;
+
+  }
+
+  .user{
+    margin-top: 15px;
+  }
+
+  #meets-container{
+    width: 400px;
+    min-height: 680px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfffc;
+    border-radius: 10px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .header{
+    width: 400px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+  }
+
+  .header2{
+    width: 960px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .lists{
+    height: 550px;
+    width: 960px;
+    background-color: #fcfffc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .meet{
+    height: 200px;
+    width: 360px;
+    background-color: #ced3dc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .meet-detail{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -25px;
+    width: 360px;
+  }
+
+  .profile-list{
+    height: 50px;
+    width: 890px;
+    background-color: #ced3dc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.trail-name{
+  margin-top: 5px;
+}
+
+.icons{
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.delete-icon{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.complete-icon{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.favorite-star{
+  position: relative;
+  cursor: pointer;
+  width: auto;
+  margin-left: -60px;
+  height: 40px;
+   }
+  
+   .favorite-star:hover {
+    box-shadow: 0px 0px 15px #5b616a;
+    cursor: pointer;
+  }
+  
+  .favorite-star:active {
+    transform: scale(0.9, 0.9);
+  }
+  
+  .complete-icon:hover {
+    box-shadow: 0px 0px 15px #5b616a;
+    cursor: pointer;
+  }
+  
+  .complete-icon:active {
+    transform: scale(0.9, 0.9);
+  }
+
+/* MEETS STYLING */
+
+#meet-body{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+  #meets-container2{
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfffc;
+    border-radius: 10px;
+    color: black;
+   
+  }
+
+  #create-container{
+    width: 400px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfffc;
+    border-radius: 10px;
+    color: black;
+  }
+
+  .meet-header{
+    width: 1000px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+  }
+
+    .meet2{
+    height: 100px;
+    width: 900px;
+    background-color: #ced3dc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .meet-detail2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -20px;
+    width: 800px;
+  }
+
+  #trail-select{
+    color: black;
+    width: 310px;
+    height: 30px;
+  }
+
+  .meet-input{
+    width: 300px;
+    height: 30px;
+    margin-top: -15px;
+  }
+
+  #create-meets{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #notes{
+    width: 350px;
+    height: 59px;
+ }
+
