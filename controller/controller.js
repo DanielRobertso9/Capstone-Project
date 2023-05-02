@@ -58,7 +58,7 @@ module.exports = {
         sequelize.query(`SELECT * FROM favorited_meets 
         JOIN public_meets ON favorited_meets.meet_key = public_meets.meet_key
         JOIN trails ON public_meets.trail_key = trails.trail_key
-        WHERE favorited_meets.user_key = 1
+        WHERE favorited_meets.user_key = ${userKey}
         ORDER BY CONCAT(meet_date, ' ', meet_time) ASC;`)
         .then((dbResult) =>{
                 res.status(200).send(dbResult[0])
