@@ -63,8 +63,8 @@ function getTrails() {
       trailList.innerHTML += trailCard;
       slideIndex.push(1);
       slideId.push(`slide${elem.trail_key}`);
-      getTrailPics();
     });
+    getTrailPics();
   });
 }
 
@@ -83,6 +83,7 @@ function getTrailPics() {
 
         trailSlide.innerHTML += slideShow;
       });
+      runSlides(slideIndex)
     });
 }
 
@@ -115,7 +116,7 @@ function runSlides(arr) {
   }
 }
 
-setTimeout(runSlides, 2000, slideIndex);
+// setTimeout(runSlides, 2000, slideIndex);
 
 // LOGIN PAGE FUNCTIONS
 
