@@ -10,7 +10,10 @@ const {getTrails, getPictures, login, getMeets, getFavorites, getCompleted, getU
 app.use(express.json())
 app.use(cors())
 
-app.use(express.static(__dirname + '../public'))
+let reqPath = path.join(__dirname + '../public')
+app.use(express.static(reqPath))
+
+console.log(__dirname + '../public')
 
 // DEV
 app.post('/seed', seed)
