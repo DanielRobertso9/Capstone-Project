@@ -116,8 +116,6 @@ function runSlides(arr) {
   }
 }
 
-// setTimeout(runSlides, 2000, slideIndex);
-
 // LOGIN PAGE FUNCTIONS
 
 function getUserKey () {
