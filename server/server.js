@@ -10,8 +10,7 @@ const {getTrails, getPictures, login, getMeets, getFavorites, getCompleted, getU
 app.use(express.json())
 app.use(cors())
 
-let reqPath = path.join(__dirname + '../public')
-app.use(express.static(reqPath))
+app.use(express.static(`${__dirname}../public`))
 
 console.log(__dirname + '../public')
 
