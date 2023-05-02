@@ -4,15 +4,13 @@ const app = express()
 const cors = require('cors')
 const {SERVER_PORT} = process.env
 
-const {seed} = require('./seed.js')
-const {getTrails, getPictures, login, getMeets, getFavorites, getCompleted, getUserInfo, key, updateKey, createMeet, favoriteMeet, getFavoritedMeets, completeTrail, deleteCompleted, deleteFavorite, favoriteTrail, createUser} = require('./controller.js')
+const {seed} = require('./controller/seed.js')
+const {getTrails, getPictures, login, getMeets, getFavorites, getCompleted, getUserInfo, key, updateKey, createMeet, favoriteMeet, getFavoritedMeets, completeTrail, deleteCompleted, deleteFavorite, favoriteTrail, createUser} = require('./controller/controller.js')
 
 app.use(express.json())
 app.use(cors())
 
 app.use(express.static(`${__dirname}/public`))
-
-console.log(__dirname + '../public')
 
 // DEV
 app.post('/seed', seed)
