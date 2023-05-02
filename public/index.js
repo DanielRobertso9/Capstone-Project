@@ -42,7 +42,7 @@ signUpBtn.addEventListener("click", emailSubmit);
 function getTrails() {
   trailList.innerHTML = "";
 
-  axios.get(`http://localhost:4545/trails/`).then((res) => {
+  axios.get(`/trails/`).then((res) => {
     res.data.forEach((elem) => {
       let trailCard = `
           <div class="trails-container">
@@ -69,7 +69,7 @@ function getTrails() {
 
 function getTrailPics() {
   axios
-    .get(`http://localhost:4545/pictures/`)
+    .get(`/pictures/`)
 
     .then((res) => {
       res.data.forEach((elem) => {
@@ -119,7 +119,7 @@ setTimeout(runSlides, 1000, slideIndex);
 // LOGIN PAGE FUNCTIONS
 
 function getUserKey () {
-  axios.get(`http://localhost:4545/key`)
+  axios.get(`/key`)
   .then((res) => {
     userKey = res.data[0]
     loggedIn()
@@ -127,7 +127,7 @@ function getUserKey () {
 }
 
 function updatedUserKey (key) {
-  axios.put(`http://localhost:4545/key`, key)
+  axios.put(`/key`, key)
   .then((res) => {console.log("updated")
   getUserKey ()
   })
@@ -211,7 +211,7 @@ function createUser () {
     photo: photoURL.value,
   };
 
-  axios.post(`http://localhost:4545/user`, body)
+  axios.post(`/user`, body)
   .then((elem) => {
     closeSignupMenu()
     openLoginMenu()
