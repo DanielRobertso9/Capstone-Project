@@ -114,7 +114,7 @@ function runSlides(arr) {
   }
 }
 
-setTimeout(runSlides, 1000, slideIndex);
+setTimeout(runSlides, 2000, slideIndex);
 
 // LOGIN PAGE FUNCTIONS
 

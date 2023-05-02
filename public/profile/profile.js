@@ -73,7 +73,7 @@ function getFavorites() {
   function getUserInfo() {
     userProfile.innerHTML = "";
 
-    axios.get(`/userInfo/`).then((res) => {
+    axios.get(`/userInfo`).then((res) => {
         let results = res.data[0]
         let userInfo = `
         <img id="profile-pic" src="${results.user_photo_url}">
