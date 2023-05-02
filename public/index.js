@@ -63,6 +63,7 @@ function getTrails() {
       trailList.innerHTML += trailCard;
       slideIndex.push(1);
       slideId.push(`slide${elem.trail_key}`);
+      getTrailPics();
     });
   });
 }
@@ -86,7 +87,7 @@ function getTrailPics() {
 }
 
 getTrails();
-getTrailPics();
+
 
 // FUNCTIONS FOR SLIDESHOW
 function showSlides(n, no) {
