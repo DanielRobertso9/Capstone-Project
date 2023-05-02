@@ -87,9 +87,9 @@ function getFavorites() {
     })
   }
 
-  const completeTrail = (id) => axios.post(`http://localhost:4545/completeTrail/${id}`).then(alert("Trail has been Completed"), getCompleted())
-  const deleteFavorite = (id) => axios.delete(`http://localhost:4545/favorite/${id}`).then(alert("Trail has been removed from Favorites"), getFavorites())
-  const deleteCompleted = (id) => axios.delete(`http://localhost:4545/completed/${id}`).then(alert("Trail has been removed from Completed"), getCompleted())
+  const completeTrail = (id) => axios.post(`/completeTrail/${id}`).then(alert("Trail has been Completed"), getCompleted())
+  const deleteFavorite = (id) => axios.delete(`/favorite/${id}`).then(alert("Trail has been removed from Favorites"), getFavorites())
+  const deleteCompleted = (id) => axios.delete(`/completed/${id}`).then(alert("Trail has been removed from Completed"), getCompleted())
 
   getCompleted()
   getFavorites()
