@@ -180,7 +180,7 @@ function logIn() {
   }
 
   axios
-    .get(`http://localhost:4545/login`)
+    .get(`/login`)
     .then((res) => {
       res.data.find((elem) => {
         if (

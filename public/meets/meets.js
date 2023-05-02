@@ -12,7 +12,7 @@ userKey = 0
 function getMeets() {
     meetList.innerHTML = "";
   
-    axios.get(`http://localhost:4545/meets/`).then((res) => {
+    axios.get(`/meets/`).then((res) => {
       res.data.forEach((elem) => {
         let meetCard = `<div class="meet2">
         <h3 class="trail-name">${elem.trail_name}</h3>
@@ -40,7 +40,7 @@ function getMeets() {
 
 
   function getTrails() {
-    axios.get(`http://localhost:4545/trails/`).then((res) => {
+    axios.get(`/trails/`).then((res) => {
       res.data.forEach((elem) => {
         const option = document.createElement('option')
         option.setAttribute('value', elem['trail_key'])
@@ -62,11 +62,11 @@ function getMeets() {
         notes: notes.value,
     };
 
-    axios.post(`http://localhost:4545/meets`, body)
+    axios.post(`/meets`, body)
         .then(() => {
             getMeets()
         })
   }
 
-const favoriteMeet = (id) => axios.post(`http://localhost:4545/favoriteMeet/${id}`).then(alert("Meet has been added to favorites"))
+const favoriteMeet = (id) => axios.post(`/favoriteMeet/${id}`).then(alert("Meet has been added to favorites"))
 

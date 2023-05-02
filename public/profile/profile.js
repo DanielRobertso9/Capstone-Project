@@ -6,7 +6,7 @@ let completedList = document.querySelector("#completed");
 function getFavoritedMeets() {
   meetList.innerHTML = "";
 
-  axios.get(`http://localhost:4545/favoritedmeets/`).then((res) => {
+  axios.get(`/favoritedmeets/`).then((res) => {
     res.data.forEach((elem) => {
       let meetCard = `
             <div class="meet">
@@ -32,7 +32,7 @@ function getFavoritedMeets() {
 function getFavorites() {
     favoriteList.innerHTML = "";
   
-    axios.get(`http://localhost:4545/favorites/`).then((res) => {
+    axios.get(`/favorites/`).then((res) => {
       res.data.forEach((elem) => {
         let favoriteCard = `
         <div class="profile-list">
@@ -53,7 +53,7 @@ function getFavorites() {
   function getCompleted() {
     completedList.innerHTML = "";
   
-    axios.get(`http://localhost:4545/completed/`).then((res) => {
+    axios.get(`/completed/`).then((res) => {
       res.data.forEach((elem) => {
         let completedCard = `
         <div class="profile-list">
@@ -73,7 +73,7 @@ function getFavorites() {
   function getUserInfo() {
     userProfile.innerHTML = "";
 
-    axios.get(`http://localhost:4545/userInfo/`).then((res) => {
+    axios.get(`/userInfo/`).then((res) => {
         let results = res.data[0]
         let userInfo = `
         <img id="profile-pic" src="${results.user_photo_url}">
