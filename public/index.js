@@ -42,7 +42,7 @@ signUpBtn.addEventListener("click", emailSubmit);
 function getTrails() {
   trailList.innerHTML = "";
 
-  axios.get(`/trails/`).then((res) => {
+  axios.get(`http://localhost:4545/trails/`).then((res) => {
     res.data.forEach((elem) => {
       let trailCard = `
           <div class="trails-container">
