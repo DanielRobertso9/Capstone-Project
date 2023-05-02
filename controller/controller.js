@@ -47,7 +47,6 @@ module.exports = {
     getMeets: (req, res) => {
         sequelize.query(`SELECT * FROM public_meets
         JOIN trails ON public_meets.trail_key = trails.trail_key
-        WHERE user_key = ${userKey}
         ORDER BY CONCAT(meet_date, ' ', meet_time) ASC;`)
         .then((dbResult) =>{
                 res.status(200).send(dbResult[0])
